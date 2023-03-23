@@ -381,3 +381,87 @@ header
 		width: 80px
 	.subtitle
 		margin: 0
+
+.footer
+	padding: 15px 23px 40px
+	&__divider
+		width: 300px
+		height: 4px
+		background-color: #1fbad6
+		margin: 0 auto
+		margin-bottom: 32px
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+	&__wrapper > div
+		width: 33%
+		&:nth-child(3)
+			display: flex
+			justify-content: flex-end
+	.social
+		display: flex
+		justify-content: space-between
+		margin: 0
+		padding: 0
+		max-width: 160px
+		width: 100%
+		list-style: none
+		&__item
+			display: flex
+			justify-content: center
+			align-items: center
+		&__link
+			margin: 0 4px
+			width: 32px
+			height: 32px
+			background-position: center
+			background-repeat: no-repeat
+			background-color: #070716
+			border-radius: 100%
+			&--facebook
+				background-image: url('../img/icons/facebook.svg')
+			&--twitter
+				background-image: url('../img/icons/twitter.svg')
+			&--linkedin
+				background-image: url('../img/icons/linkedin.svg')
+			&--instagram
+				background-image: url('../img/icons/instagram.svg')
+	&-links
+		margin: 0 auto
+		max-width: 390px
+		width: 100%
+		&__main, &__sub
+			display: flex
+			justify-content: space-between
+			margin: 0
+			margin-bottom: 20px
+			padding: 0
+			list-style: none
+		&__link
+			color: #070716
+			font-size: 15px
+			font-weight: 300
+			text-transform: uppercase
+			text-decoration: none
+		&__sub .footer-links__link
+			color: #999999
+			font-size: 11px
+		&__lang
+			display: block
+			text-align: center
+			color: #1fbad6
+			font-size: 11px
+			font-weight: 400
+			text-transform: uppercase
+			text-decoration: none
+	&-mobile
+		display: flex
+		justify-content: space-between
+		margin: 0
+		padding: 0
+		max-width: 300px
+		width: 100%
+		list-style: none
+		&__item
+			font-size: 0
