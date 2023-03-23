@@ -1,3 +1,14 @@
+$white: #ffffff
+$black: #000000
+$mine-shaft: #222222
+$blue: #1eacc7
+$red: #ff5656
+
+=btn_hover
+	&:hover
+		background-image: none
+		background-color: $blue
+
 @font-face
 	font-family: "Roboto"
 	src: url("../fonts/RobotoRegular.woff2") format("woff2"),
@@ -21,15 +32,63 @@
 	font-weight: 700
 	font-style: normal
 	font-display: swap
-* 
+
+*
 	font-family: 'Roboto', sans-serif
 	outline: none
+
+.label
+	position: relative
+	z-index: 2
+	text-align: center
+	margin: 0 auto
+	margin-bottom: 32px
+	padding: 5px 12px
+	width: 112px
+	background-color: $black
+	color: $white
+	font-size: 11px
+	font-weight: 300
+	text-transform: uppercase
+	&--white
+		color: #070716
+		background-color: $white
+
+.title
+	position: relative
+	z-index: 2
+	margin: 0
+	margin-bottom: 15px
+	color: $mine-shaft
+	font-size: 38px
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+	&--white
+		margin: 0
+		color: $white
+
+.subtitle
+	position: relative
+	z-index: 2
+	text-align: center
+	margin: 0
+	margin-bottom: 30px
+	color: $mine-shaft
+	font-size: 17px
+	font-weight: 400
+	line-height: 21px
+	&--white
+		margin-bottom: 55px
+		color: $white
+
 header
 	position: relative
 	height: 50px
+
 .nav-menu
 	position: fixed
-	z-index: 2
+	z-index: 10
 	width: 100%
 	background-color: #212121
 	&__list
@@ -45,10 +104,11 @@ header
 			padding: 0
 			border: none
 	&__link
-		color: #ffffff
+		color: $white
 		font-size: 15px
 		font-weight: 300
 		text-decoration: none
+
 .subheader
 	position: absolute
 	top: 50px
@@ -61,19 +121,19 @@ header
 		margin-bottom: 6px
 		font-size: 0
 	&__official
-		color: #ffffff
+		color: $white
 		font-size: 13px
 		font-weight: 300
 		opacity: 0.5
 	&__call
 		margin-bottom: 10px
-		color: #ffffff
+		color: $white
 		font-size: 12px
 		font-weight: 300
 		text-align: right
 	&__phone
 		margin-top: 8px
-		color: #ffffff
+		color: $white
 		font-size: 22px
 		font-weight: 400
 		text-transform: uppercase
@@ -84,14 +144,16 @@ header
 		height: 46px
 		border: none
 		border-radius: 4px
-		color: #ffffff
+		color: $white
 		font-size: 14px
 		font-weight: 400
 		text-transform: uppercase
-		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+		background-image: linear-gradient(to top, $blue 0%, #4ce2ff 100%)
 		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
 		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
 		cursor: pointer
+		+btn_hover
+
 .promo
 	text-align: center
 	background: url('../img/bg/uber_bg.jpg') center center/cover no-repeat
@@ -99,7 +161,7 @@ header
 	&__title
 		margin: 0
 		margin-bottom: 22px
-		color: #ffffff
+		color: $white
 		font-weight: 700
 		text-transform: uppercase
 		font-size: 60px
@@ -107,7 +169,7 @@ header
 	&__subtitle
 		margin: 0
 		margin-bottom: 16px
-		color: #ffffff
+		color: $white
 		font-weight: 700
 		text-transform: uppercase
 		font-size: 36px
@@ -115,7 +177,7 @@ header
 	&__descr
 		margin: 0
 		margin-bottom: 116px
-		color: #ffffff
+		color: $white
 		font-size: 18px
 		font-weight: 400
 		line-height: 24px
@@ -125,52 +187,36 @@ header
 		box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
 		border: none
 		border-radius: 4px
-		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+		background-image: linear-gradient(to top, $blue 0%, #4ce2ff 100%)
 		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
-		color: #ffffff
+		color: $white
 		font-size: 18px
 		font-weight: 400
 		text-transform: uppercase
 		cursor: pointer
+		+btn_hover
+
 .reasons
 	padding: 18px 40px
-	&__label
-		margin: 0 auto
-		margin-bottom: 32px
-		padding: 5px 12px
-		width: 112px
-		background-color: #000000
-		color: #ffffff
-		font-size: 11px
-		font-weight: 300
-		text-transform: uppercase
-	&__title
-		margin: 0
-		margin-bottom: 15px
-		color: #222222
-		font-size: 38px
-		font-weight: 700
-		text-transform: uppercase
-		text-align: center
 	&__block
 		display: flex
-		justify-content: center 
-		margin-bottom: 25px 
-	&__round 
-		display: flex 
+		justify-content: center
+		margin-bottom: 25px
+	&__round
+		display: flex
 		justify-content: center
 		align-items: center
 		margin-right: 26px
 		width: 113px
 		height: 113px
-		background-color: #1eacc7
+		background-color: $blue
 		border-radius: 100%
 	&__descr
 		width: 343px
 	&__subtitle
 		margin: 0
 		line-height: 21px
-		color: #1eacc7
+		color: $blue
 		font-size: 17px
 		font-weight: 400
 	&__text
@@ -179,3 +225,95 @@ header
 		font-size: 15px
 		font-weight: 300
 		line-height: 21px
+
+.mobile
+	padding: 50px 0 80px
+	background: url('../img/bg/mobile_bg.png') center (center / cover) no-repeat
+	&__title
+		margin-bottom: 0
+	&__item
+		position: relative
+		margin: 0 auto
+		margin-bottom: 20px
+		padding: 82px 25px 35px
+		width: 320px
+		height: 280px
+		background: center (center / cover) no-repeat
+		&--1
+			background-image: url('../img/mobile/mobile_1.jpg')
+		&--2
+			background-image: url('../img/mobile/mobile_2.jpg')
+		&--3
+			background-image: url('../img/mobile/mobile_3.jpg')
+		&--4
+			background-image: url('../img/mobile/mobile_4.jpg')
+		&--5
+			background-image: url('../img/mobile/mobile_5.jpg')
+		&--6
+			background-image: url('../img/mobile/mobile_6.jpg')
+		&-title
+			text-align: center
+			margin: 0
+			color: $white
+			font-weight: 400
+			font-size: 24px
+			line-height: 31px
+			text-transform: uppercase
+		&-btn
+			position: absolute
+			bottom: 35px
+			left: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 6px
+			width: 29px
+			height: 29px
+			border: none
+			border-radius: 50%
+			background-color: $black
+			font-size: 0
+			transform: translateX(-50%)
+			cursor: pointer
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $blue
+				transition: background-color 0.3s
+			&:after
+				content: ''
+				position: absolute
+				left: 50%
+				display: block
+				width: 2px
+				height: 14px
+				background-color: $blue
+				transform: translateX(-50%)
+				transition: background-color 0.3s
+			&:hover
+				&:before, &:after
+					background-color: $red
+
+.choice
+	position: relative
+	text-align: center
+	padding: 55px 0 135px
+	background: url('../img/bg/mobile_bg.png') center (center / cover) no-repeat
+	&__black
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		width: 100%
+		height: 500px
+		background-color: #070716
+	&__img
+		position: relative
+		z-index: 2
+	&__descr
+		color: $mine-shaft
+		font-size: 17px
+		font-weight: 300
+		line-height: 24px
