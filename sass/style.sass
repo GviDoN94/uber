@@ -317,3 +317,67 @@ header
 		font-size: 17px
 		font-weight: 300
 		line-height: 24px
+
+.require
+	padding: 70px 0 25px
+	&__block
+		margin-bottom: 60px
+	&__title
+		margin: 0
+		margin-bottom: 20px
+		color: #1CA8C3
+		font-weight: 400
+		font-size: 22px
+		line-height: 24px
+	&__list
+		margin: 0
+		padding-left: 50px
+		list-style: none
+	&__item
+		position: relative
+		margin-bottom: 10px
+		color: $mine-shaft
+		font-weight: 300
+		font-size: 17px
+		line-height: 24px
+		&:last-child
+			margin: 0
+		&:before
+			content: ''
+			position: absolute
+			left: -32px
+			top: 2px
+			display: block
+			width: 21px
+			height: 20px
+			background: url('../img/icons/check_blue.png') center (center / cover) no-repeat
+	&__descr
+		margin-top: 25px
+		color: #1CA8C3
+		font-weight: 300
+		font-size: 17px
+		line-height: 24px
+	.warning
+		.require__title
+			color: $red
+		.require__list
+			.require__item
+				&:before
+					background: url('../img/icons/check_red.png') center (center / cover) no-repeat
+
+.world
+	text-align: center
+	padding: 50px 0
+	background: url('../img/bg/world_bg.jpg') center (center / cover) no-repeat
+	&__link
+		display: inline-block
+		margin-top: 455px
+		color: #1fbad6
+		font-size: 15px
+		font-weight: 400
+		text-transform: uppercase
+		text-decoration: none
+	.label
+		width: 80px
+	.subtitle
+		margin: 0
