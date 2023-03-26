@@ -89,3 +89,88 @@
 			&:nth-child(3)
 				width: 100%
 				justify-content: center
+
+@media (max-width: 767px)
+	.label
+		margin-bottom: 25px
+	.nav-menu
+		&__list
+			position: fixed
+			top: 0
+			left: -100%
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			width: 60%
+			height: 100vh
+			padding: 20px 15px
+			background-color: rgba(0,0,0, 0.8)
+			transition: left 0.6s
+			&--active
+				left: 0
+		&__item
+			margin-bottom: 25px
+			padding: 0
+			border: none
+		&__link
+			font-size: 25px
+	.hamburger
+		position: absolute
+		right: 10px
+		top: 50%
+		display: block
+		width: 26px
+		transform: translateY(-50%)
+		span
+			display: block
+			margin-bottom: 5px
+			height: 2px
+			width: 100%
+			background-color: $white
+			transition: transform 0.5s
+		&--active
+			span
+				margin-bottom: -2px
+				&:nth-child(1)
+					transform: rotate(-45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: rotate(45deg)
+
+	.xs-hidden
+		display: none
+	.xs-visible
+		display: block
+		margin-bottom: 10px
+	.subheader
+		&__phone
+			text-align: center
+		&__btn
+			display: block
+			margin: 0 auto
+			width: 200px
+			height: 40px
+
+	.promo
+		padding: 190px 0 100px
+		&__title
+			line-height: 45px
+
+	.reasons
+		padding: 40px 0
+		&__descr
+			width: 350px
+		&__subtitle
+			text-align: center
+			margin-bottom: 10px
+	.mobile
+		padding: 40px 0
+	.choice
+		&__black
+			height: 400px
+			padding: 40px 0
+		img
+			width: 500px
+	.require
+		padding: 40px 0

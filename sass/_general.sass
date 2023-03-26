@@ -45,12 +45,12 @@
 
 header
     position: relative
-    height: 50px
 
 .nav-menu
     position: fixed
     z-index: 10
     width: 100%
+    min-height: 50px
     background-color: #212121
     &__list
         display: flex
@@ -69,6 +69,9 @@ header
         font-size: 15px
         font-weight: 300
         text-decoration: none
+
+.hamburger
+    display: none
 
 .subheader
     position: absolute
@@ -94,7 +97,6 @@ header
         text-align: right
     &__phone
         display: block
-        margin-top: 8px
         color: $white
         font-size: 22px
         font-weight: 400
@@ -427,3 +429,5 @@ header
         list-style: none
         &__item
             font-size: 0
+.xs-visible
+    display: none
