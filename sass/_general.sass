@@ -1,16 +1,19 @@
-.label
-    position: relative
-    z-index: 2
-    text-align: center
-    margin: 0 auto
-    margin-bottom: 32px
-    padding: 5px 12px
-    width: 112px
-    background-color: $black
-    color: $white
-    font-size: 11px
-    font-weight: 300
-    text-transform: uppercase
+body
+    min-width: 320px
+
+    .label
+        position: relative
+        z-index: 2
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 32px
+        padding: 5px 12px
+        width: 112px
+        background-color: $black
+        color: $white
+        font-size: 11px
+        font-weight: 300
+        text-transform: uppercase
     &--white
         color: $ebony
         background-color: $white
@@ -193,13 +196,13 @@ header
 .mobile
     padding: 50px 0 80px
     background: url('../img/bg/mobile_bg.png') center (center / cover) no-repeat
-    &__title
+    .title
         margin-bottom: 0
     &__item
         position: relative
         margin: 0 auto
         margin-bottom: 20px
-        padding: 82px 25px 35px
+        padding: 80px 25px 35px
         width: 320px
         height: 280px
         background: center (center / cover) no-repeat
